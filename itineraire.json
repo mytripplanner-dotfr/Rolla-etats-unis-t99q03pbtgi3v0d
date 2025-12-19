@@ -1,0 +1,329 @@
+{
+  "pays": "États-Unis",
+  "drapeau": "🇺🇸",
+  "symbole": "🦅",
+  "titre": "Rolla, Missouri : L'Équilibre entre Savoir et Nature Ozarkienne",
+  "budget_total": "$2800",
+  "duree": "10 jours",
+  "date_debut": "2026-01-01",
+  "date_fin": "2026-01-10",
+  "temps_vol": "6h depuis Parks, etats unis avec escale",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée et Premiers Pas à Rolla",
+      "legende": "Après un vol et un trajet en voiture, prenez le temps de vous installer et de faire une première découverte tranquille de Rolla. L'ambiance universitaire de la ville offre une atmosphère accueillante, parfaite pour une balade légère et un dîner réconfortant, marquant le début de votre aventure dans le Missouri.",
+      "lieu": "Rolla",
+      "activites": [
+        "🛬 <strong>Arrivée à St. Louis et trajet vers Rolla</strong>: Atterrissez à l'aéroport international de St. Louis (STL), puis récupérez votre voiture de location pour un trajet d'environ 1h45 jusqu'à Rolla. Profitez du paysage hivernal du Missouri.",
+        "🛏️ <strong>Installation à l'hôtel et détente</strong>: Enregistrez-vous dans votre hôtel 3 étoiles et prenez un moment pour vous reposer après le voyage. Déballez vos affaires et préparez-vous pour une soirée tranquille.",
+        "🚶‍♂️ <strong>Balade légère dans le centre-ville</strong>: Faites une courte promenade autour de votre hôtel ou dans le petit centre-ville de Rolla pour vous imprégner de l'atmosphère locale. Repérez quelques restaurants pour vos futurs repas."
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "Conseil transport",
+          "texte": "La location de voiture est essentielle pour ce séjour, Rolla et ses environs ne disposant pas de transports en commun étendus."
+        },
+        {
+          "symbole": "🍽️",
+          "titre": "Dîner",
+          "texte": "Pour votre première soirée, optez pour un restaurant local comme le Alex's Pizza Palace & Restaurant, une institution à Rolla."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "🔬",
+      "titre": "Immersion Scientifique et Culturelle",
+      "legende": "Plongez au cœur de l'innovation à l'Université du Missouri S&T, un pilier de la ville. L'après-midi, explorez le centre-ville de Rolla, découvrez son histoire et ses petites boutiques, mélangeant ainsi savoir et charme local pour une journée enrichissante.",
+      "lieu": "Rolla",
+      "activites": [
+        "🔬 <strong>Visite du campus de Missouri S&T</strong>: Explorez le campus de l'Université du Missouri de Science et Technologie, réputée pour ses programmes d'ingénierie. Admirez l'architecture et l'ambiance studieuse.",
+        "🏛️ <strong>Découverte du centre-ville de Rolla</strong>: Flânez dans les rues principales de Rolla, découvrez les bâtiments historiques et les petites boutiques. C'est l'occasion de trouver des souvenirs uniques.",
+        "🎨 <strong>Galerie d'art de l'Université</strong>: Visitez la galerie d'art de l'université, qui présente souvent des œuvres d'étudiants et d'artistes locaux. C'est une belle pause culturelle."
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "🎓",
+          "titre": "Missouri S&T",
+          "texte": "L'université est un moteur économique et culturel pour Rolla, avec de nombreux événements ouverts au public."
+        },
+        {
+          "symbole": "☕",
+          "titre": "Pause café",
+          "texte": "Profitez d'un café chaud dans l'un des établissements du centre-ville pour vous réchauffer."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "📜",
+      "titre": "Histoire Locale et Nature Urbaine",
+      "legende": "Ce jour est dédié à l'histoire de Phelps County et à la détente dans les espaces verts de Rolla. Découvrez les récits du passé de la région avant de vous ressourcer au cœur de la nature, même en plein hiver, pour une journée équilibrée entre culture et plein air.",
+      "lieu": "Rolla",
+      "activites": [
+        "📜 <strong>Musée de la Société Historique du Comté de Phelps</strong>: Explorez les expositions qui retracent l'histoire de Rolla et du comté de Phelps, des pionniers aux développements modernes. C'est une fenêtre sur le passé de la région.",
+        "🌳 <strong>Promenade au Lions Club Park</strong>: Profitez d'une balade revigorante dans le Lions Club Park, le plus grand parc de Rolla. Même en hiver, ses sentiers offrent une belle échappée naturelle."
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "🕰️",
+          "titre": "Histoire locale",
+          "texte": "Le musée est une excellente ressource pour comprendre le développement de Rolla, notamment son rôle dans l'exploitation minière et l'éducation."
+        },
+        {
+          "symbole": "❄️",
+          "titre": "Vêtements",
+          "texte": "N'oubliez pas vos gants, bonnet et écharpe pour profiter pleinement des activités extérieures en janvier."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "💧",
+      "titre": "Évasion Naturelle à Meramec Spring Park",
+      "legende": "Aventurez-vous hors de Rolla pour découvrir la beauté naturelle de Meramec Spring Park. Ce site historique et pittoresque offre des sources naturelles impressionnantes, une pisciculture et les vestiges d'un ancien moulin, le tout dans un cadre paisible et rafraîchissant.",
+      "lieu": "St. James (environ 30 min de Rolla)",
+      "activites": [
+        "💧 <strong>Exploration de Meramec Spring Park</strong>: Visitez l'une des plus grandes sources du Missouri, un spectacle naturel impressionnant. Le parc est également un lieu historique avec les ruines d'un ancien moulin et une pisciculture.",
+        "🎣 <strong>Observation de la pisciculture</strong>: Observez les truites dans la pisciculture du parc, où des milliers de poissons sont élevés. C'est une activité relaxante et éducative.",
+        "🚶‍♀️ <strong>Randonnée légère autour de la source</strong>: Profitez des sentiers faciles qui serpentent autour de la source et le long de la rivière Meramec. La nature hivernale offre une atmosphère sereine."
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "🚗",
+          "titre": "Trajet",
+          "texte": "Le parc est à environ 30 minutes de route de Rolla, une escapade facile pour la journée."
+        },
+        {
+          "symbole": "📸",
+          "titre": "Photographie",
+          "texte": "Les paysages hivernaux autour de la source et du moulin sont très photogéniques."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "🔦",
+      "titre": "Mystères Souterrains d'Onondaga Cave",
+      "legende": "Plongez dans les profondeurs de la terre pour explorer les formations spectaculaires d'Onondaga Cave State Park. Cette expérience souterraine fascinante vous révélera la beauté cachée du Missouri, le \"Cave State\", offrant un contraste saisissant avec les paysages extérieurs hivernaux.",
+      "lieu": "Leasburg (environ 45 min de Rolla)",
+      "activites": [
+        "🔦 <strong>Visite guidée d'Onondaga Cave</strong>: Participez à une visite guidée de cette magnifique grotte, réputée pour ses stalactites, stalagmites et autres formations calcaires impressionnantes. La température y est constante toute l'année.",
+        "🌲 <strong>Promenade dans le parc d'État</strong>: Après la grotte, profitez des sentiers de randonnée du parc d'État d'Onondaga Cave. Même en hiver, une courte marche en forêt est agréable."
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "🌡️",
+          "titre": "Température de la grotte",
+          "texte": "La température à l'intérieur de la grotte est d'environ 14°C (57°F) toute l'année, ce qui en fait une activité agréable même par temps froid."
+        },
+        {
+          "symbole": "🎟️",
+          "titre": "Réservation",
+          "texte": "Il est conseillé de vérifier les horaires des visites guidées et de réserver à l'avance, surtout en période de forte affluence."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "🍇",
+      "titre": "Saveurs Locales et Artisanat",
+      "legende": "Découvrez les saveurs du Missouri en visitant les vignobles de St. James, une région viticole réputée. L'après-midi, explorez une brasserie artisanale locale pour goûter à la bière du terroir, offrant une immersion gustative complète et chaleureuse.",
+      "lieu": "St. James (environ 15 min de Rolla)",
+      "activites": [
+        "🍇 <strong>Dégustation de vins à St. James Winery</strong>: Visitez l'un des vignobles les plus célèbres du Missouri, St. James Winery. Profitez d'une dégustation de leurs vins primés, même en hiver l'ambiance est chaleureuse.",
+        "🍺 <strong>Visite de Public House Brewing Company</strong>: Rendez-vous à la Public House Brewing Company pour découvrir leur processus de brassage et déguster des bières artisanales locales. C'est une excellente façon de terminer la journée."
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "🍷",
+          "titre": "Vins du Missouri",
+          "texte": "Le Missouri a une longue histoire viticole, avec des cépages uniques adaptés à son climat."
+        },
+        {
+          "symbole": "🚗",
+          "titre": "Conduite responsable",
+          "texte": "Si vous prévoyez de déguster de l'alcool, assurez-vous d'avoir un conducteur désigné ou utilisez un service de covoiturage."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "🌲",
+      "titre": "Aventure dans la Forêt Nationale Mark Twain",
+      "legende": "Échappez à l'agitation et plongez au cœur de la nature sauvage de la Forêt Nationale Mark Twain. Profitez d'une randonnée hivernale dans la Paddy Creek Wilderness, un lieu préservé offrant des paysages magnifiques et une tranquillité absolue, loin de tout.",
+      "lieu": "Forêt Nationale Mark Twain (environ 45 min de Rolla)",
+      "activites": [
+        "🌲 <strong>Randonnée dans la Paddy Creek Wilderness</strong>: Explorez les sentiers de cette zone sauvage, offrant des paysages forestiers, des ruisseaux et des formations rocheuses. C'est une immersion totale dans la nature.",
+        "🏞️ <strong>Pique-nique hivernal (si le temps le permet)</strong>: Préparez un pique-nique chaud et trouvez un endroit pittoresque pour le déguster. Une thermos de boisson chaude est fortement recommandée."
+      ],
+      "illustration": "jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "🗺️",
+          "titre": "Cartes",
+          "texte": "Téléchargez une carte des sentiers à l'avance, car la couverture réseau peut être limitée dans certaines zones de la forêt."
+        },
+        {
+          "symbole": "🥾",
+          "titre": "Équipement",
+          "texte": "Portez des chaussures de randonnée imperméables et des couches de vêtements pour vous adapter aux changements de température."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": "🏖️",
+      "titre": "Détente et Découverte Locale",
+      "legende": "Profitez d'une journée plus relaxante, explorant des sites uniques autour de Rolla. Visitez Fugitive Beach, même hors saison, pour son cadre particulier, puis découvrez l'art local ou les petites curiosités de la région, pour une journée de découvertes insolites.",
+      "lieu": "Rolla et environs",
+      "activites": [
+        "🏖️ <strong>Visite de Fugitive Beach (hors saison)</strong>: Découvrez ce site unique, une ancienne carrière transformée en plage. Même en hiver, le paysage rocheux et l'eau claire offrent un cadre intéressant pour une promenade.",
+        "🖼️ <strong>Exploration des galeries d'art locales</strong>: Recherchez les petites galeries ou ateliers d'artistes à Rolla ou dans les villes voisines. C'est une opportunité de découvrir l'art et l'artisanat du Missouri."
+      ],
+      "illustration": "jour8.jpg",
+      "encarts": [
+        {
+          "symbole": "💡",
+          "titre": "Originalité",
+          "texte": "Fugitive Beach est une curiosité locale, offrant un aperçu de la transformation des paysages industriels en lieux de loisirs."
+        },
+        {
+          "symbole": "🎁",
+          "titre": "Souvenirs",
+          "texte": "Les galeries d'art locales sont parfaites pour trouver des cadeaux uniques et soutenir les artistes de la région."
+        }
+      ]
+    },
+    {
+      "jour": 9,
+      "symbole": "🛍️",
+      "titre": "Derniers Moments et Préparatifs",
+      "legende": "Profitez de vos dernières heures à Rolla pour revisiter un lieu coup de cœur, faire quelques achats de dernière minute ou simplement vous détendre dans un café local. Préparez-vous tranquillement pour votre départ le lendemain, en savourant les derniers instants de votre séjour.",
+      "lieu": "Rolla",
+      "activites": [
+        "🛍️ <strong>Achats de souvenirs et produits locaux</strong>: Flânez dans les boutiques de Rolla pour trouver des souvenirs ou des produits artisanaux du Missouri. C'est l'occasion de ramener un petit morceau de votre voyage.",
+        "☕ <strong>Détente dans un café local</strong>: Savourez un dernier café ou une boisson chaude dans l'un des cafés confortables de Rolla. Profitez de l'ambiance décontractée.",
+        "📦 <strong>Préparation des bagages</strong>: Commencez à organiser vos affaires et à préparer vos bagages pour le départ de demain. Assurez-vous de ne rien oublier."
+      ],
+      "illustration": "jour9.jpg",
+      "encarts": [
+        {
+          "symbole": "🎁",
+          "titre": "Idées cadeaux",
+          "texte": "Pensez aux produits à base de noix de pécan, aux confitures locales ou aux objets d'artisanat."
+        },
+        {
+          "symbole": "⛽",
+          "titre": "Plein d'essence",
+          "texte": "N'oubliez pas de faire le plein de votre voiture de location avant de la rendre."
+        }
+      ]
+    },
+    {
+      "jour": 10,
+      "symbole": "✈️",
+      "titre": "Départ de Rolla",
+      "legende": "C'est le jour du départ. Après un dernier petit-déjeuner à Rolla, prenez la route vers l'aéroport de St. Louis pour votre vol retour, emportant avec vous les souvenirs de votre aventure dans le Missouri et la promesse de revenir un jour.",
+      "lieu": "Rolla / St. Louis",
+      "activites": [
+        "🍳 <strong>Dernier petit-déjeuner à Rolla</strong>: Profitez d'un dernier repas dans un restaurant local avant de prendre la route.",
+        "🚗 <strong>Trajet vers l'aéroport de St. Louis (STL)</strong>: Conduisez jusqu'à l'aéroport, en prévoyant suffisamment de temps pour le trajet et la restitution de la voiture.",
+        "✈️ <strong>Vol retour</strong>: Enregistrez-vous pour votre vol et repartez avec de beaux souvenirs du Missouri."
+      ],
+      "illustration": "jour10.jpg",
+      "encarts": [
+        {
+          "symbole": "⏰",
+          "titre": "Heure de départ",
+          "texte": "Prévoyez au moins 2 heures de route pour l'aéroport de St. Louis, plus le temps pour la restitution de la voiture et l'enregistrement."
+        },
+        {
+          "symbole": "📱",
+          "titre": "Check-in en ligne",
+          "texte": "Effectuez votre enregistrement en ligne pour gagner du temps à l'aéroport."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    {
+      "titre": "Budget vol:",
+      "legende": "$400/pers (Vol aller-retour Parks, USA - St. Louis, MO en classe économique)",
+      "symbole": "🛬"
+    },
+    {
+      "titre": "Budget transports:",
+      "legende": "$550/pers (Location de voiture pour 9 jours et essence)",
+      "symbole": "🚆"
+    },
+    {
+      "titre": "Budget repas:",
+      "legende": "$630/pers (Repas pour 9 jours, budget moyen)",
+      "symbole": "🥗"
+    },
+    {
+      "titre": "Budget logement:",
+      "legende": "$1080/pers (9 nuits en hôtel 3 étoiles)",
+      "symbole": "🛏️"
+    },
+    {
+      "titre": "Budget activités:",
+      "legende": "$150/pers (Entrées musées, parcs et dégustations)",
+      "symbole": "🎭"
+    }
+  ],
+  "periodes_ideales": [
+    {
+      "titre": "Les périodes idéales pour ce séjour sont les mois de avril et octobre.",
+      "symbole": "🍁"
+    }
+  ],
+  "infos_pratiques": [
+    {
+      "titre": "Population de Rolla : Environ 20 000 habitants, ville universitaire dynamique et accueillante.",
+      "symbole": "👥"
+    },
+    {
+      "titre": "Le Missouri est surnommé le \"Cave State\" en raison de ses nombreuses grottes souterraines, offrant des explorations uniques.",
+      "symbole": "🔦"
+    },
+    {
+      "titre": "En janvier, les températures à Rolla peuvent varier de -5°C à 5°C, avec des risques de neige ou de verglas. Prévoyez des vêtements très chauds et imperméables.",
+      "symbole": "❄️"
+    },
+    {
+      "titre": "La voiture est indispensable pour explorer Rolla et ses environs, les transports en commun étant limités. La conduite se fait à droite.",
+      "symbole": "🚗"
+    }
+  ],
+  "liens_utiles": [
+    {
+      "legende": "Infos officielles et inspirations pour votre séjour à Rolla",
+      "titre": "Tourisme Rolla",
+      "url": "https://visitrolla.com/",
+      "symbole": "📘"
+    },
+    {
+      "legende": "Informations sur les parcs d'État du Missouri, incluant Meramec Spring et Onondaga Cave",
+      "titre": "Missouri State Parks",
+      "url": "https://mostateparks.com/",
+      "symbole": "🌳"
+    },
+    {
+      "legende": "Prévisions météorologiques détaillées pour Rolla, Missouri",
+      "titre": "Météo Rolla",
+      "url": "https://www.weather.gov/sgf/Rolla",
+      "symbole": "🌤️"
+    }
+  ]
+}
