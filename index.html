@@ -1,0 +1,554 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolla, Missouri : L'Équilibre entre Savoir et Nature Ozarkienne </title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée et Premiers Pas à Rolla</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Immersion Scientifique et Culturelle</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Histoire Locale et Nature Urbaine</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Évasion Naturelle à Meramec Spring Park</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Mystères Souterrains d'Onondaga Cave</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Saveurs Locales et Artisanat</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Aventure dans la Forêt Nationale Mark Twain</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Détente et Découverte Locale</a>
+            
+                <a href="#jour-9" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J9 Derniers Moments et Préparatifs</a>
+            
+                <a href="#jour-10" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J10 Départ de Rolla</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/Rolla-etats-unis-t99q03pbtgi3v0d/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">ROLLA- ETATS UNIS</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">Rolla, Missouri : L'Équilibre entre Savoir et Nature Ozarkienne</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ Du 1 au 10 Janvier 2026</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 $2800</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 6h depuis Parks, etats unis avec escale</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+      <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+      </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée et Premiers Pas à Rolla</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un vol et un trajet en voiture, prenez le temps de vous installer et de faire une première découverte tranquille de Rolla. L'ambiance universitaire de la ville offre une atmosphère accueillante, parfaite pour une balade légère et un dîner réconfortant, marquant le début de votre aventure dans le Missouri.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛬 <strong>Arrivée à St. Louis et trajet vers Rolla</strong>: Atterrissez à l'aéroport international de St. Louis (STL), puis récupérez votre voiture de location pour un trajet d'environ 1h45 jusqu'à Rolla. Profitez du paysage hivernal du Missouri.</li><li>🛏️ <strong>Installation à l'hôtel et détente</strong>: Enregistrez-vous dans votre hôtel 3 étoiles et prenez un moment pour vous reposer après le voyage. Déballez vos affaires et préparez-vous pour une soirée tranquille.</li><li>🚶‍♂️ <strong>Balade légère dans le centre-ville</strong>: Faites une courte promenade autour de votre hôtel ou dans le petit centre-ville de Rolla pour vous imprégner de l'atmosphère locale. Repérez quelques restaurants pour vos futurs repas.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Rolla-etats-unis-t99q03pbtgi3v0d/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ Conseil transport</p>
+                                <p class="text-gray-700">La location de voiture est essentielle pour ce séjour, Rolla et ses environs ne disposant pas de transports en commun étendus.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍽️ Dîner</p>
+                                <p class="text-gray-700">Pour votre première soirée, optez pour un restaurant local comme le Alex's Pizza Palace & Restaurant, une institution à Rolla.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Immersion Scientifique et Culturelle</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Plongez au cœur de l'innovation à l'Université du Missouri S&T, un pilier de la ville. L'après-midi, explorez le centre-ville de Rolla, découvrez son histoire et ses petites boutiques, mélangeant ainsi savoir et charme local pour une journée enrichissante.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🔬 <strong>Visite du campus de Missouri S&T</strong>: Explorez le campus de l'Université du Missouri de Science et Technologie, réputée pour ses programmes d'ingénierie. Admirez l'architecture et l'ambiance studieuse.</li><li>🏛️ <strong>Découverte du centre-ville de Rolla</strong>: Flânez dans les rues principales de Rolla, découvrez les bâtiments historiques et les petites boutiques. C'est l'occasion de trouver des souvenirs uniques.</li><li>🎨 <strong>Galerie d'art de l'Université</strong>: Visitez la galerie d'art de l'université, qui présente souvent des œuvres d'étudiants et d'artistes locaux. C'est une belle pause culturelle.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Rolla-etats-unis-t99q03pbtgi3v0d/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎓 Missouri S&T</p>
+                                <p class="text-gray-700">L'université est un moteur économique et culturel pour Rolla, avec de nombreux événements ouverts au public.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">☕ Pause café</p>
+                                <p class="text-gray-700">Profitez d'un café chaud dans l'un des établissements du centre-ville pour vous réchauffer.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Histoire Locale et Nature Urbaine</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Ce jour est dédié à l'histoire de Phelps County et à la détente dans les espaces verts de Rolla. Découvrez les récits du passé de la région avant de vous ressourcer au cœur de la nature, même en plein hiver, pour une journée équilibrée entre culture et plein air.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>📜 <strong>Musée de la Société Historique du Comté de Phelps</strong>: Explorez les expositions qui retracent l'histoire de Rolla et du comté de Phelps, des pionniers aux développements modernes. C'est une fenêtre sur le passé de la région.</li><li>🌳 <strong>Promenade au Lions Club Park</strong>: Profitez d'une balade revigorante dans le Lions Club Park, le plus grand parc de Rolla. Même en hiver, ses sentiers offrent une belle échappée naturelle.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Rolla-etats-unis-t99q03pbtgi3v0d/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🕰️ Histoire locale</p>
+                                <p class="text-gray-700">Le musée est une excellente ressource pour comprendre le développement de Rolla, notamment son rôle dans l'exploitation minière et l'éducation.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">❄️ Vêtements</p>
+                                <p class="text-gray-700">N'oubliez pas vos gants, bonnet et écharpe pour profiter pleinement des activités extérieures en janvier.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Évasion Naturelle à Meramec Spring Park</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aventurez-vous hors de Rolla pour découvrir la beauté naturelle de Meramec Spring Park. Ce site historique et pittoresque offre des sources naturelles impressionnantes, une pisciculture et les vestiges d'un ancien moulin, le tout dans un cadre paisible et rafraîchissant.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>💧 <strong>Exploration de Meramec Spring Park</strong>: Visitez l'une des plus grandes sources du Missouri, un spectacle naturel impressionnant. Le parc est également un lieu historique avec les ruines d'un ancien moulin et une pisciculture.</li><li>🎣 <strong>Observation de la pisciculture</strong>: Observez les truites dans la pisciculture du parc, où des milliers de poissons sont élevés. C'est une activité relaxante et éducative.</li><li>🚶‍♀️ <strong>Randonnée légère autour de la source</strong>: Profitez des sentiers faciles qui serpentent autour de la source et le long de la rivière Meramec. La nature hivernale offre une atmosphère sereine.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Rolla-etats-unis-t99q03pbtgi3v0d/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚗 Trajet</p>
+                                <p class="text-gray-700">Le parc est à environ 30 minutes de route de Rolla, une escapade facile pour la journée.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Photographie</p>
+                                <p class="text-gray-700">Les paysages hivernaux autour de la source et du moulin sont très photogéniques.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Mystères Souterrains d'Onondaga Cave</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Plongez dans les profondeurs de la terre pour explorer les formations spectaculaires d'Onondaga Cave State Park. Cette expérience souterraine fascinante vous révélera la beauté cachée du Missouri, le "Cave State", offrant un contraste saisissant avec les paysages extérieurs hivernaux.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🔦 <strong>Visite guidée d'Onondaga Cave</strong>: Participez à une visite guidée de cette magnifique grotte, réputée pour ses stalactites, stalagmites et autres formations calcaires impressionnantes. La température y est constante toute l'année.</li><li>🌲 <strong>Promenade dans le parc d'État</strong>: Après la grotte, profitez des sentiers de randonnée du parc d'État d'Onondaga Cave. Même en hiver, une courte marche en forêt est agréable.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Rolla-etats-unis-t99q03pbtgi3v0d/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌡️ Température de la grotte</p>
+                                <p class="text-gray-700">La température à l'intérieur de la grotte est d'environ 14°C (57°F) toute l'année, ce qui en fait une activité agréable même par temps froid.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎟️ Réservation</p>
+                                <p class="text-gray-700">Il est conseillé de vérifier les horaires des visites guidées et de réserver à l'avance, surtout en période de forte affluence.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Saveurs Locales et Artisanat</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Découvrez les saveurs du Missouri en visitant les vignobles de St. James, une région viticole réputée. L'après-midi, explorez une brasserie artisanale locale pour goûter à la bière du terroir, offrant une immersion gustative complète et chaleureuse.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🍇 <strong>Dégustation de vins à St. James Winery</strong>: Visitez l'un des vignobles les plus célèbres du Missouri, St. James Winery. Profitez d'une dégustation de leurs vins primés, même en hiver l'ambiance est chaleureuse.</li><li>🍺 <strong>Visite de Public House Brewing Company</strong>: Rendez-vous à la Public House Brewing Company pour découvrir leur processus de brassage et déguster des bières artisanales locales. C'est une excellente façon de terminer la journée.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Rolla-etats-unis-t99q03pbtgi3v0d/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍷 Vins du Missouri</p>
+                                <p class="text-gray-700">Le Missouri a une longue histoire viticole, avec des cépages uniques adaptés à son climat.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚗 Conduite responsable</p>
+                                <p class="text-gray-700">Si vous prévoyez de déguster de l'alcool, assurez-vous d'avoir un conducteur désigné ou utilisez un service de covoiturage.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Aventure dans la Forêt Nationale Mark Twain</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Échappez à l'agitation et plongez au cœur de la nature sauvage de la Forêt Nationale Mark Twain. Profitez d'une randonnée hivernale dans la Paddy Creek Wilderness, un lieu préservé offrant des paysages magnifiques et une tranquillité absolue, loin de tout.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🌲 <strong>Randonnée dans la Paddy Creek Wilderness</strong>: Explorez les sentiers de cette zone sauvage, offrant des paysages forestiers, des ruisseaux et des formations rocheuses. C'est une immersion totale dans la nature.</li><li>🏞️ <strong>Pique-nique hivernal (si le temps le permet)</strong>: Préparez un pique-nique chaud et trouvez un endroit pittoresque pour le déguster. Une thermos de boisson chaude est fortement recommandée.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Rolla-etats-unis-t99q03pbtgi3v0d/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗺️ Cartes</p>
+                                <p class="text-gray-700">Téléchargez une carte des sentiers à l'avance, car la couverture réseau peut être limitée dans certaines zones de la forêt.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🥾 Équipement</p>
+                                <p class="text-gray-700">Portez des chaussures de randonnée imperméables et des couches de vêtements pour vous adapter aux changements de température.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Détente et Découverte Locale</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez d'une journée plus relaxante, explorant des sites uniques autour de Rolla. Visitez Fugitive Beach, même hors saison, pour son cadre particulier, puis découvrez l'art local ou les petites curiosités de la région, pour une journée de découvertes insolites.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🏖️ <strong>Visite de Fugitive Beach (hors saison)</strong>: Découvrez ce site unique, une ancienne carrière transformée en plage. Même en hiver, le paysage rocheux et l'eau claire offrent un cadre intéressant pour une promenade.</li><li>🖼️ <strong>Exploration des galeries d'art locales</strong>: Recherchez les petites galeries ou ateliers d'artistes à Rolla ou dans les villes voisines. C'est une opportunité de découvrir l'art et l'artisanat du Missouri.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Rolla-etats-unis-t99q03pbtgi3v0d/main/jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Originalité</p>
+                                <p class="text-gray-700">Fugitive Beach est une curiosité locale, offrant un aperçu de la transformation des paysages industriels en lieux de loisirs.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Souvenirs</p>
+                                <p class="text-gray-700">Les galeries d'art locales sont parfaites pour trouver des cadeaux uniques et soutenir les artistes de la région.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-9" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 9</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Derniers Moments et Préparatifs</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez de vos dernières heures à Rolla pour revisiter un lieu coup de cœur, faire quelques achats de dernière minute ou simplement vous détendre dans un café local. Préparez-vous tranquillement pour votre départ le lendemain, en savourant les derniers instants de votre séjour.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛍️ <strong>Achats de souvenirs et produits locaux</strong>: Flânez dans les boutiques de Rolla pour trouver des souvenirs ou des produits artisanaux du Missouri. C'est l'occasion de ramener un petit morceau de votre voyage.</li><li>☕ <strong>Détente dans un café local</strong>: Savourez un dernier café ou une boisson chaude dans l'un des cafés confortables de Rolla. Profitez de l'ambiance décontractée.</li><li>📦 <strong>Préparation des bagages</strong>: Commencez à organiser vos affaires et à préparer vos bagages pour le départ de demain. Assurez-vous de ne rien oublier.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Rolla-etats-unis-t99q03pbtgi3v0d/main/jour9.jpg" class="w-full h-64 object-cover" alt="Jour 9">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Idées cadeaux</p>
+                                <p class="text-gray-700">Pensez aux produits à base de noix de pécan, aux confitures locales ou aux objets d'artisanat.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⛽ Plein d'essence</p>
+                                <p class="text-gray-700">N'oubliez pas de faire le plein de votre voiture de location avant de la rendre.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-10" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 10</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Départ de Rolla</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">C'est le jour du départ. Après un dernier petit-déjeuner à Rolla, prenez la route vers l'aéroport de St. Louis pour votre vol retour, emportant avec vous les souvenirs de votre aventure dans le Missouri et la promesse de revenir un jour.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🍳 <strong>Dernier petit-déjeuner à Rolla</strong>: Profitez d'un dernier repas dans un restaurant local avant de prendre la route.</li><li>🚗 <strong>Trajet vers l'aéroport de St. Louis (STL)</strong>: Conduisez jusqu'à l'aéroport, en prévoyant suffisamment de temps pour le trajet et la restitution de la voiture.</li><li>✈️ <strong>Vol retour</strong>: Enregistrez-vous pour votre vol et repartez avec de beaux souvenirs du Missouri.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Rolla-etats-unis-t99q03pbtgi3v0d/main/jour10.jpg" class="w-full h-64 object-cover" alt="Jour 10">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Heure de départ</p>
+                                <p class="text-gray-700">Prévoyez au moins 2 heures de route pour l'aéroport de St. Louis, plus le temps pour la restitution de la voiture et l'enregistrement.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📱 Check-in en ligne</p>
+                                <p class="text-gray-700">Effectuez votre enregistrement en ligne pour gagner du temps à l'aéroport.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget vol: </strong>$400/pers (Vol aller-retour Parks, USA - St. Louis, MO en classe économique)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget transports: </strong>$550/pers (Location de voiture pour 9 jours et essence)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget repas: </strong>$630/pers (Repas pour 9 jours, budget moyen)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget logement: </strong>$1080/pers (9 nuits en hôtel 3 étoiles)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget activités: </strong>$150/pers (Entrées musées, parcs et dégustations)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Les périodes idéales pour ce séjour sont les mois de avril et octobre.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">👥 Population de Rolla : Environ 20 000 habitants, ville universitaire dynamique et accueillante.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🔦 Le Missouri est surnommé le "Cave State" en raison de ses nombreuses grottes souterraines, offrant des explorations uniques.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">❄️ En janvier, les températures à Rolla peuvent varier de -5°C à 5°C, avec des risques de neige ou de verglas. Prévoyez des vêtements très chauds et imperméables.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🚗 La voiture est indispensable pour explorer Rolla et ses environs, les transports en commun étant limités. La conduite se fait à droite.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/Rolla-etats-unis-t99q03pbtgi3v0d/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://visitrolla.com/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Tourisme Rolla</strong></a></li>
+                    
+                        <li><a href="https://mostateparks.com/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌳 Missouri State Parks</strong></a></li>
+                    
+                        <li><a href="https://www.weather.gov/sgf/Rolla" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ Météo Rolla</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
